@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import centerImage from '../assets/hero_assets/hero_center.png';
+import centerImage from "../assets/hero_assets/hero_center.PNG";
 
 const Hero = ({ onPreloadComplete }) => {
   const [text, setText] = useState('ARYA');
