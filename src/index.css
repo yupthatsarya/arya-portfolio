@@ -5,13 +5,31 @@
   display: none;
 }
 
+html {
+  scroll-behavior: smooth;
+  background: #111114;
+}
+
 html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   -ms-overflow-style: none;
-  /* IE and Edge */
   scrollbar-width: none;
-  /* Firefox */
-  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background: #111114;
+}
+
+/* Better mobile viewport handling */
+#home {
+  min-height: 100vh;
+  min-height: 100svh;
 }
 
 @keyframes marquee {
@@ -74,4 +92,13 @@ body {
   color: transparent;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
   animation: waterFill 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Prevent accidental horizontal scrolling on phones */
+@media (max-width: 767px) {
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
 }
