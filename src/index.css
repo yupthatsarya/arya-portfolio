@@ -1,13 +1,8 @@
 @import "tailwindcss";
 
-/* Hide scrollbar globally but allow scrolling */
-::-webkit-scrollbar {
-  display: none;
-}
-
 html {
   scroll-behavior: smooth;
-  background: #111114;
+  background: #121214;
 }
 
 html,
@@ -23,13 +18,11 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
   overflow-x: hidden;
-  background: #111114;
+  background: #121214;
 }
 
-/* Better mobile viewport handling */
-#home {
-  min-height: 100vh;
-  min-height: 100svh;
+::-webkit-scrollbar {
+  display: none;
 }
 
 @keyframes marquee {
@@ -92,13 +85,4 @@ body {
   color: transparent;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
   animation: waterFill 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-/* Prevent accidental horizontal scrolling on phones */
-@media (max-width: 767px) {
-  html,
-  body {
-    width: 100%;
-    overflow-x: hidden;
-  }
 }
